@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Recommendation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="recommendations/beaches.html">Beaches</a></li>
+                <li><a href="recommendations/temples.html">Temples</a></li>
+                <li><a href="recommendations/countries.html">Countries</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="intro">
+            <h1>Welcome to the Travel Recommendation Website</h1>
+            <p>Discover your ideal destination with personalized recommendations.</p>
+        </section>
+        
+        <section class="slideshow">
+            <h2>Top Travel Destinations</h2>
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="images/bali.jpg" alt="Bali, Indonesia" height="200px" width="100%">
+                        <div class="slide-text">Experience the serene beaches and rich culture of Bali.</div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/paris.jpg" alt="Paris, France" height="200px" width="100%">
+                        <div class="slide-text">Explore the romantic streets and iconic landmarks of Paris.</div>
+                    </div>
+                    <div class="slide">
+                        <img src="images/kyoto.jpg" alt="Kyoto’s, Japan" height="200px" width="100%">
+                        <div class="slide-text">Visit Kyoto’s stunning temples and cherry blossoms.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="dashboard">
+            <h2>Top Travel Recommendations</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="images/beaches.jpg" alt="Beach Destination">
+                    <h3>Beautiful Beaches</h3>
+                    <p>Relax on the sandy shores of the world's best beaches.</p>
+                    <a href="recommendations/beaches.html">Explore</a>
+                </div>
+                <div class="card">
+                    <img src="images/temples.jpg" alt="Temple Destination">
+                    <h3>Historic Temples</h3>
+                    <p>Discover ancient temples with rich cultural heritage.</p>
+                    <a href="recommendations/temples.html">Explore</a>
+                </div>
+                <div class="card">
+                    <img src="images/countries.webp" alt="Country Destination">
+                    <h3>Travel by Country</h3>
+                    <p>Find the best places to visit in different countries.</p>
+                    <a href="recommendations/countries.html">Explore</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Travel Recommendation. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        let index = 0;
+        function showSlides() {
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach(slide => slide.style.display = 'none');
+            index = (index + 1) % slides.length;
+            slides[index].style.display = 'block';
+            setTimeout(showSlides, 3000);
+        }
+        document.addEventListener("DOMContentLoaded", showSlides);
+    </script>
+</body>
+</html>
